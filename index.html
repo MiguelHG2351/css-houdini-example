@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Houdini | API</title>
+        <link rel="icon" href="logo.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header-site">
+            <div class="logo">
+                <img src="logo.png" alt="Imagen del sitio v:" />
+            </div>
+            <ul class="nav-list">
+                <li class="list-item">
+                    <a href="#">
+                        CSS Houdini
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                        Navigator API
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="#">
+                        fetch API
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <section class="container">
+            <article>
+                <header class="header-container">
+                    <h2>CSS Houdini | Paint API</h2>
+                </header>
+                <section class="example">
+                    <button class="btn">Paint API</button>
+                </section>
+            </article>
+        </section>
+
+        <script>
+            if('paintWorklet' in CSS) {
+                CSS.paintWorklet.addModule('paint.js')
+            } else {
+                alert()
+            }
+        </script>
+
+    </body>
+</html>
